@@ -3,7 +3,7 @@ const sumArgs = () => {
   let total = 0
 
   args.forEach(arg => {
-    total = total + Number(arg)
+    total = total + parseInt(arg, 10)
   })
 
   console.log(total)

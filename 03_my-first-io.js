@@ -6,8 +6,6 @@ const countNumberOfNewLines = () => {
     .readFileSync(filePath, { encoding: 'utf8' })
     .split('\n')
 
-  // console.log(splitText)
-
   return splitText.length - 1
 }
 

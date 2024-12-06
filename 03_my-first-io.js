@@ -1,12 +1,11 @@
-const fs = require('fs')
+const fs = require("node:fs");
 
-const countNumberOfNewLines = () => {
-  const filePath = process.argv[2]
-  const splitText = fs
-    .readFileSync(filePath, { encoding: 'utf8' })
-    .split('\n')
+const countNumberOfNewLinesSync = () => {
+  const filePath = process.argv[2];
 
-  return splitText.length - 1
-}
+  const content = fs.readFileSync(filePath, { encoding: "utf8" });
 
-console.log(countNumberOfNewLines())
+  return content.split("\n").length - 1;
+};
+
+console.log(countNumberOfNewLinesSync());

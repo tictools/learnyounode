@@ -1,12 +1,14 @@
 const sumArgs = () => {
-  const args = process.argv.slice(2)
-  let total = 0
+  let total = 0;
 
-  args.forEach(arg => {
-    total = total + parseInt(arg, 10)
-  })
+  const args = process.argv.slice(2);
+  const argsLength = args.length;
 
-  console.log(total)
-}
+  for (let index = 0; index < argsLength; index++) {
+    total += parseInt(args[index], 10);
+  }
 
-sumArgs()
+  return total;
+};
+
+console.log(sumArgs());

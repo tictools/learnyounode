@@ -1,7 +1,9 @@
 const http = require("node:http");
 
 //main
-const urlToFetch = process.argv[2];
+const defaultUrlToFetch = "http://localhost:8080";
+const urlToFetch = process.argv[2] ?? defaultUrlToFetch;
+
 http.get(urlToFetch, responseController).on("error", logError);
 
 /**

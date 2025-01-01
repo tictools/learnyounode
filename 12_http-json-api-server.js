@@ -59,9 +59,7 @@ const isUnixTimePath = (pathName) => pathName === PATHNAME.UNIXTIME;
  * @param {URL} url - The URL object from which to extract the pathname segment.
  * @returns {string} The last segment of the pathname.
  */
-function getPathNameFrom(url) {
-  return url.pathname.split("/").at(-1);
-}
+const getPathNameFrom = (url) => url.pathname.split("/").at(-1);
 
 /**
  * @typedef {Object} TimeComponents
